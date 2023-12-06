@@ -67,3 +67,6 @@ jobs:
           app-name: 'getting-started-with-azure'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_9F9D047893BA4CE0BB258CACCB680BBA }}
+
+      - name: Run FastApi App
+        run: uvicorn main:app --host=0.0.0.0 --port=8000
